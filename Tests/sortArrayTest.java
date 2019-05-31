@@ -91,7 +91,4 @@ public class sortArrayTest {
         mixValuesList =sortList.sortListOfIntegers(mixValuesList);
         assertEquals(expectedMixValuesList, mixValuesList);
     }
-
-
-
 }
