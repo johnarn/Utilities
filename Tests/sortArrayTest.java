@@ -9,86 +9,89 @@ import static org.junit.Assert.assertEquals;
 public class sortArrayTest {
 
     @Test
-    public void testSortArrayOfIntegersUsingNegativeValues(){
-        List<Integer> negativeArray = new ArrayList<>();
-        negativeArray.add(-4);
-        negativeArray.add(-5);
-        negativeArray.add(-8);
-        negativeArray.add(-2);
-        negativeArray.add(-1);
-        negativeArray.add(-5);
+    public void testSortListOfIntegersUsingNegativeValues(){
+        List<Integer> negativeList = new ArrayList<>();
+        negativeList.add(-4);
+        negativeList.add(-5);
+        negativeList.add(-8);
+        negativeList.add(-2);
+        negativeList.add(-1);
+        negativeList.add(-5);
 
-        List<Integer> expectedNegativeArray = new ArrayList<>();
-        expectedNegativeArray.add(-8);
-        expectedNegativeArray.add(-5);
-        expectedNegativeArray.add(-5);
-        expectedNegativeArray.add(-4);
-        expectedNegativeArray.add(-2);
-        expectedNegativeArray.add(-1);
+        List<Integer> expectedNegativeList = new ArrayList<>();
+        expectedNegativeList.add(-8);
+        expectedNegativeList.add(-5);
+        expectedNegativeList.add(-5);
+        expectedNegativeList.add(-4);
+        expectedNegativeList.add(-2);
+        expectedNegativeList.add(-1);
 
-        negativeArray =sortArray.sortArrayOfIntegers(negativeArray);
-        assertEquals(expectedNegativeArray, negativeArray);
+        negativeList =sortList.sortListOfIntegers(negativeList);
+        assertEquals(expectedNegativeList, negativeList);
     }
 
 
     @Test
-    public void testSortArrayOfIntegersUsingPositiveValues(){
-        List<Integer> positiveArray = new ArrayList<>();
-        positiveArray.add(4);
-        positiveArray.add(5);
-        positiveArray.add(8);
-        positiveArray.add(2);
-        positiveArray.add(1);
-        positiveArray.add(5);
+    public void testSortListOfIntegersUsingPositiveValues(){
+        List<Integer> positiveList = new ArrayList<>();
+        positiveList.add(4);
+        positiveList.add(5);
+        positiveList.add(8);
+        positiveList.add(2);
+        positiveList.add(1);
+        positiveList.add(5);
 
-        List<Integer> expectedPositiveArray = new ArrayList<>();
-        expectedPositiveArray.add(1);
-        expectedPositiveArray.add(2);
-        expectedPositiveArray.add(4);
-        expectedPositiveArray.add(5);
-        expectedPositiveArray.add(5);
-        expectedPositiveArray.add(8);
+        List<Integer> expectedPositiveList = new ArrayList<>();
+        expectedPositiveList.add(1);
+        expectedPositiveList.add(2);
+        expectedPositiveList.add(4);
+        expectedPositiveList.add(5);
+        expectedPositiveList.add(5);
+        expectedPositiveList.add(8);
 
-        positiveArray =sortArray.sortArrayOfIntegers(positiveArray);
-        assertEquals(expectedPositiveArray, positiveArray);
+        positiveList =sortList.sortListOfIntegers(positiveList);
+        assertEquals(expectedPositiveList, positiveList);
     }
 
     @Test
-    public void testSortArrayOfIntegersUsingNull(){
-        List<Integer> nullArray = null;
-        List<Integer> expectednullArray = null;
-        nullArray =sortArray.sortArrayOfIntegers(nullArray);
-        assertEquals(expectednullArray, nullArray);
+    public void testSortListOfIntegersUsingNull(){
+        List<Integer> nullList = null;
+        List<Integer> expectednullList = null;
+        nullList =sortList.sortListOfIntegers(nullList);
+        assertEquals(expectednullList, nullList);
     }
 
     @Test
-    public void testSortArrayOfIntegersUsingZeroLengthArray(){
-        List<Integer> zeroLengthArray = new ArrayList<>();
-        List<Integer> expectedzeroLengthArray = new ArrayList<>();
-        zeroLengthArray =sortArray.sortArrayOfIntegers(zeroLengthArray);
-        assertEquals(expectedzeroLengthArray, zeroLengthArray);
+    public void testSortListOfIntegersUsingZeroLengthArray(){
+        List<Integer> zeroLengthList = new ArrayList<>();
+        List<Integer> expectedzeroLengthList = new ArrayList<>();
+        zeroLengthList =sortList.sortListOfIntegers(zeroLengthList);
+        assertEquals(expectedzeroLengthList, zeroLengthList);
     }
 
 
     @Test
-    public void testSortArrayOfIntegersUsingAllRangeOfValues(){
-        List<Integer> mixValuesArray = new ArrayList<>();
-        mixValuesArray.add(-4);
-        mixValuesArray.add(5);
-        mixValuesArray.add(8);
-        mixValuesArray.add(-2);
-        mixValuesArray.add(1);
-        mixValuesArray.add(0);
+    public void testSortListOfIntegersUsingAllRangeOfValues(){
+        List<Integer> mixValuesList = new ArrayList<>();
+        mixValuesList.add(-4);
+        mixValuesList.add(5);
+        mixValuesList.add(8);
+        mixValuesList.add(-2);
+        mixValuesList.add(1);
+        mixValuesList.add(0);
 
-        List<Integer> expectedMixValuesArray = new ArrayList<>();
-        expectedMixValuesArray.add(-4);
-        expectedMixValuesArray.add(-2);
-        expectedMixValuesArray.add(0);
-        expectedMixValuesArray.add(1);
-        expectedMixValuesArray.add(5);
-        expectedMixValuesArray.add(8);
+        List<Integer> expectedMixValuesList = new ArrayList<>();
+        expectedMixValuesList.add(-4);
+        expectedMixValuesList.add(-2);
+        expectedMixValuesList.add(0);
+        expectedMixValuesList.add(1);
+        expectedMixValuesList.add(5);
+        expectedMixValuesList.add(8);
 
-        mixValuesArray =sortArray.sortArrayOfIntegers(mixValuesArray);
-        assertEquals(expectedMixValuesArray, mixValuesArray);
+        mixValuesList =sortList.sortListOfIntegers(mixValuesList);
+        assertEquals(expectedMixValuesList, mixValuesList);
     }
+
+
+
 }
