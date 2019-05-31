@@ -62,7 +62,7 @@ public class sortArrayTest {
     }
 
     @Test
-    public void testSortListOfIntegersUsingZeroLengthArray(){
+    public void testSortListOfIntegersUsingZeroLengthList(){
         List<Integer> zeroLengthList = new ArrayList<>();
         List<Integer> expectedzeroLengthList = new ArrayList<>();
         zeroLengthList =sortList.sortListOfIntegers(zeroLengthList);
@@ -91,4 +91,39 @@ public class sortArrayTest {
         mixValuesList =sortList.sortListOfIntegers(mixValuesList);
         assertEquals(expectedMixValuesList, mixValuesList);
     }
+
+    @Test
+    public void testSortListOfStringsUsingNull(){
+        List<String> nullValuesList = null;
+        List<String> expectedNullValuesList = null;
+        nullValuesList =sortList.sortListOfStrings(nullValuesList);
+        assertEquals(expectedNullValuesList, nullValuesList);
+    }
+
+    @Test
+    public void testSortListOfStringsUsingZeroLengthList(){
+        List<String> zeroLengthList = new ArrayList<>();
+        List<String> expectedZeroLengthList = new ArrayList<>();
+        zeroLengthList =sortList.sortListOfStrings(zeroLengthList);
+        assertEquals(expectedZeroLengthList, zeroLengthList);
+    }
+
+    @Test
+    public void testSortListOfStringsUsingValues(){
+        List<String> valuesList = new ArrayList<>();
+        valuesList.add("Morocco");
+        valuesList.add("Greece");
+        valuesList.add("USA");
+        valuesList.add("Canada");
+
+        List<String> expectedValuesList = new ArrayList<>();
+        expectedValuesList.add("Canada");
+        expectedValuesList.add("Greece");
+        expectedValuesList.add("Morocco");
+        expectedValuesList.add("USA");
+
+        valuesList =sortList.sortListOfStrings(valuesList);
+        assertEquals(expectedValuesList, valuesList);
+    }
+
 }
