@@ -37,7 +37,6 @@ public class sortHashMapByValueTest {
     @Test
     public void testSortByValueWithStringAsKeyAndNegativeDoubleAsValue() {
         Map<String, Double> hashmap = new HashMap<>();
-
         hashmap.put("first", -10.0);
         hashmap.put("third", -25.0);
         hashmap.put("second", -14.0);
@@ -62,17 +61,8 @@ public class sortHashMapByValueTest {
     }
 
     @Test
-    public void testSortByValueWithNullHashMap() {
-        Map<String, Double> newSortedHashmap = sortHashMapByValue.sortByValue(null);
-        Map<String, Double> emptyHashMap = new HashMap<>();
-        assertEquals(emptyHashMap, newSortedHashmap);
-    }
-
-
-    @Test
     public void testSortByValueWithStringAsKeyAndMixDoubleAsValue() {
         Map<String, Double> hashmap = new HashMap<>();
-
         hashmap.put("first", -10.0);
         hashmap.put("third", 0.0);
         hashmap.put("second", 14.0);
@@ -96,6 +86,10 @@ public class sortHashMapByValueTest {
         }
     }
 
-
-
+    @Test
+    public void testSortByValueWithNullHashMap() {
+        Map<String, Double> newSortedHashmap = sortHashMapByValue.sortByValue(null);
+        Map<String, Double> emptyHashMap = new HashMap<>();
+        assertEquals(emptyHashMap, newSortedHashmap);
+    }
 }
