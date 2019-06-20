@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class sortArrayTest {
+public class sortListTest {
 
     @Test
     public void testSortListOfIntegersUsingNegativeValues(){
