@@ -35,4 +35,11 @@ public class subsetsOfHashMapTest {
 
         assertTrue(testSubsets.size() == subsets.size() && testSubsets.containsAll(subsets) && subsets.containsAll(testSubsets));
     }
+
+    @Test
+    public void testSubsetOfHashMapWithNullHashMap() {
+        Map<String, Integer> map = null;
+        List<Map<String, Integer>> subsets = subsetsOfHashMap.powerSet(map);
+        assertEquals(null, subsets);
+    }
 }
